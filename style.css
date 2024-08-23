@@ -1,0 +1,142 @@
+/* Estilos Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #f0f0f0;
+}
+
+/* Cabeçalho */
+header {
+    background-color: rgb(58, 58, 58);
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-between; /* Ajustado para espaçar os elementos */
+    gap: 20px; /* Reduzido o gap para telas menores */
+    padding: 20px 10px; /* Ajustado o padding */
+}
+
+.logo {
+    font-size: 30px;
+    color: rgb(243, 172, 79);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-family: sans-serif;
+}
+
+nav a:hover {
+    color: rgb(243, 172, 79);
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.buttons a {
+    background-color: rgb(243, 172, 79);
+    color: #fff;
+    border: none;
+    padding: 10px 15px; /* Ajustado para tamanhos menores */
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+/* Estilos dos Produtos */
+.produto img {
+    width: 100%; /* Ajustado para largura responsiva */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 8px;
+    border: #e2e2e2 solid 1px;
+}
+
+.produto a {
+    font-size: 16px;
+    font-weight: 400;
+    color: #0F1111;
+    text-decoration: none;
+}
+
+.produto a:hover {
+    color: rgb(243, 172, 79);
+}
+
+.itens {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Ajustado para responsividade */
+    border: #080808;
+    justify-content: center;
+    text-align: center;
+    gap: 20px; /* Ajustado o gap para telas menores */
+    margin: 20px;
+}
+
+.logo p {
+    font-size: medium;
+    color: #fff;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Empilha os itens verticalmente em telas menores */
+        align-items: flex-start; /* Alinha os itens ao início */
+    }
+
+    .logo {
+        font-size: 24px; /* Reduz o tamanho da fonte do logo */
+    }
+
+    .buttons a {
+        padding: 10px 15px; /* Ajusta o padding dos botões */
+    }
+
+    nav {
+        flex-direction: column; /* Empilha os links da navegação verticalmente */
+        gap: 10px; /* Ajusta o gap entre os itens da navegação */
+    }
+
+    .itens {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Ajusta o número de colunas */
+        gap: 10px; /* Ajusta o gap entre os produtos */
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 10px; /* Reduz o padding para telas muito pequenas */
+    }
+
+    .logo {
+        font-size: 20px; /* Reduz o tamanho da fonte do logo ainda mais */
+    }
+
+    .buttons {
+        flex-direction: column; /* Empilha os botões verticalmente */
+        gap: 10px; /* Ajusta o gap entre os botões */
+    }
+
+    .produto img {
+        width: 100%; /* Garante que a imagem ocupe toda a largura disponível */
+    }
+}
